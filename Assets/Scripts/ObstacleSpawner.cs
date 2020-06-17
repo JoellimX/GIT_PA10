@@ -6,6 +6,7 @@ using UnityEngine;
 public class ObstacleSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject Obstacle = null;
+    [SerializeField] private GameObject Score = null;
     [SerializeField] private float SpawnInterval = 1;
     private float NextSpawn = 0;
 
@@ -17,6 +18,7 @@ public class ObstacleSpawner : MonoBehaviour
             Vector3 SpawnPos = new Vector3(8, Random.Range(-3, 3), 0);
 
             Instantiate(Obstacle, SpawnPos, Quaternion.identity);
+            Instantiate(Score, SpawnPos, Quaternion.identity);
         }
     }
 }
